@@ -2,10 +2,10 @@
 Krungsri Consumer Testing
 
 # Repository structure
-  - keywords/    # Reusable keywords
-  - resources/   # Config
-  - testdata/    # Test data
-  - test script  # Execute test suites
+  - keywords/    # Reusable keywords (Keywords)
+  - resources/   # Config (Setting)
+  - testdata/    # Test data (Variables)
+  - test script  # Execute test suites (Test case)
 
 # Getting started
   - Python below 3.14
