@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.7 on win32)" generated="2026-08-23T17:49:17.538981" rpa="false" schemaversion="5">
+<suite id="s1" name="Credit Card Carousel" source="C:\Users\Patch\Downloads\exam_patcharaphol\testscript\ui\credit_card_carousel.robot">
+<kw name="Open Credit Card Page" owner="ui_keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-08-23T17:49:17.790840" level="INFO">Opening browser 'Chrome' to base url 'https://www.krungsriconsumer.com/credit-card'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-08-23T17:49:17.790614" elapsed="5.147206"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-08-23T17:49:22.938092" elapsed="0.050380"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${IMPLICIT_TIMEOUT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-08-23T17:49:22.988630" elapsed="0.000827"/>
+</kw>
+<kw name="Wait And Click Element" owner="ui_keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-23T17:49:22.989862" elapsed="0.081849"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-23T17:49:23.072198" level="INFO">Clicking element 'xpath=//button[text()="ตกลงทั้งหมด"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-23T17:49:23.071925" elapsed="4.423791"/>
+</kw>
+<arg>xpath=//button[text()="${confirm}"]</arg>
+<doc>Wait And Click Element</doc>
+<status status="PASS" start="2026-08-23T17:49:22.989627" elapsed="4.506258"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-08-23T17:49:47.496792" level="INFO">Slept 20 seconds.</msg>
+<arg>${IMPLICIT_TIMEOUT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-08-23T17:49:27.496064" elapsed="20.000834"/>
+</kw>
+<kw name="Wait And Click Element" owner="ui_keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-23T17:49:47.497331" elapsed="0.010759"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-23T17:49:47.508432" level="INFO">Clicking element 'xpath=//a[@data-link="smenu-2"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-23T17:49:47.508225" elapsed="0.041400"/>
+</kw>
+<arg>xpath=//a[@data-link="smenu-2"]</arg>
+<doc>Wait And Click Element</doc>
+<status status="PASS" start="2026-08-23T17:49:47.497086" elapsed="0.052738"/>
+</kw>
+<doc>Open Credit Card Page</doc>
+<status status="PASS" start="2026-08-23T17:49:17.790059" elapsed="29.759866"/>
+</kw>
+<test id="s1-t1" name="UI-01 Section Renders On Page Load" line="7">
+<kw name="Verify default screen" owner="ui_keyword">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-08-23T17:49:47.580660" level="INFO">${text} = รวมบัตรเครดิตและสินเชื่อ
+ในกลุ่มกรุงศรี คอนซูมเมอร์
+พร้อมสร้างทุกความเป็นไปได้ในทุกไลฟ์สไตล์   </msg>
+<var>${text}</var>
+<arg>xpath=//h1[contains(@class,'cnt-h2')]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-23T17:49:47.551404" elapsed="0.029310"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2026-08-23T17:49:47.581145" elapsed="0.000545"/>
+</kw>
+<var name="${expected}">รวมบัตรเครดิตและสินเชื่อ</var>
+<status status="PASS" start="2026-08-23T17:49:47.581030" elapsed="0.000726"/>
+</iter>
+<iter>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2026-08-23T17:49:47.582002" elapsed="0.000300"/>
+</kw>
+<var name="${expected}">ในกลุ่มกรุงศรี คอนซูมเมอร์</var>
+<status status="PASS" start="2026-08-23T17:49:47.581882" elapsed="0.000503"/>
+</iter>
+<iter>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2026-08-23T17:49:47.582663" elapsed="0.000421"/>
+</kw>
+<var name="${expected}">พร้อมสร้างทุกความเป็นไปได้ในทุกไลฟ์สไตล์</var>
+<status status="PASS" start="2026-08-23T17:49:47.582538" elapsed="0.000624"/>
+</iter>
+<var>${expected}</var>
+<value>@{expected_texts}</value>
+<status status="PASS" start="2026-08-23T17:49:47.580825" elapsed="0.002401"/>
+</for>
+<doc>Verify default screen</doc>
+<status status="PASS" start="2026-08-23T17:49:47.551080" elapsed="0.032259"/>
+</kw>
+<doc>UI-01 Section Renders On Page Load</doc>
+<tag>regression</tag>
+<tag>sit</tag>
+<tag>smoke</tag>
+<tag>ui</tag>
+<status status="PASS" start="2026-08-23T17:49:47.550128" elapsed="0.033467"/>
+</test>
+<test id="s1-t2" name="UI-02 Clicking Krungsri Credit Cards Updates The Title" line="12">
+<kw name="Click Card Entity And Verify Title" owner="ui_keyword">
+<kw name="Wait And Click Element" owner="ui_keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-23T17:49:47.584873" elapsed="0.847063"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-23T17:49:48.432657" level="INFO">Clicking element 'xpath=//a[@tabs-name='krungsricard']'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-23T17:49:48.432253" elapsed="0.064333"/>
+</kw>
+<arg>xpath=//a[@tabs-name='${entity alt text}']</arg>
+<doc>Wait And Click Element</doc>
+<status status="PASS" start="2026-08-23T17:49:47.584636" elapsed="0.912038"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//h2[normalize-space(.)="${expected h2 title keyword}"]/following-sibling::h3[contains(., "${expected h3 title keyword}")]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-23T17:49:48.496782" elapsed="0.015461"/>
+</kw>
+<arg>${krungsricard}</arg>
+<arg>บัตรเครดิต กรุงศรี เอ็กซ์คลูซีฟ ซิกเนเจอร์</arg>
+<arg>ยกระดับอภิสิทธิ์ความสุข</arg>
+<doc>Click Card Entity And Verify Title</doc>
+<status status="PASS" start="2026-08-23T17:49:47.584388" elapsed="0.927971"/>
+</kw>
+<doc>UI-02 Clicking Krungsri Credit Cards Updates The Title</doc>
+<tag>regression</tag>
+<tag>sit</tag>
+<tag>smoke</tag>
+<tag>ui</tag>
+<status status="PASS" start="2026-08-23T17:49:47.584037" elapsed="0.928644"/>
+</test>
+<test id="s1-t3" name="UI-03 Clicking First Choice Updates The Title" line="17">
+<kw name="Click Card Entity And Verify Title" owner="ui_keyword">
+<kw name="Wait And Click Element" owner="ui_keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-23T17:49:48.514319" elapsed="0.012465"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-23T17:49:48.527345" level="INFO">Clicking element 'xpath=//a[@tabs-name='firstchoice']'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-23T17:49:48.526954" elapsed="0.060883"/>
+</kw>
+<arg>xpath=//a[@tabs-name='${entity alt text}']</arg>
+<doc>Wait And Click Element</doc>
+<status status="PASS" start="2026-08-23T17:49:48.514088" elapsed="0.073881"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//h2[normalize-space(.)="${expected h2 title keyword}"]/following-sibling::h3[contains(., "${expected h3 title keyword}")]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-23T17:49:48.588104" elapsed="0.016655"/>
+</kw>
+<arg>firstchoice</arg>
+<arg>เฟิร์สช้อยส์ วีซ่า แพลทินัม บลูพลัส</arg>
+<arg>อัปเกรดสิทธิ์ ชีวิตพริวิเลจ</arg>
+<doc>Click Card Entity And Verify Title</doc>
+<status status="PASS" start="2026-08-23T17:49:48.513706" elapsed="0.091143"/>
+</kw>
+<doc>UI-03 Clicking First Choice Updates The Title</doc>
+<tag>regression</tag>
+<tag>sit</tag>
+<tag>smoke</tag>
+<tag>ui</tag>
+<status status="PASS" start="2026-08-23T17:49:48.513131" elapsed="0.091953"/>
+</test>
+<test id="s1-t4" name="UI-04 Clicking Central The 1 Updates The Title" line="22">
+<kw name="Click Card Entity And Verify Title" owner="ui_keyword">
+<kw name="Wait And Click Element" owner="ui_keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-23T17:49:48.606390" elapsed="0.010042"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-23T17:49:48.616837" level="INFO">Clicking element 'xpath=//a[@tabs-name='centralthe1card']'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-23T17:49:48.616583" elapsed="0.058911"/>
+</kw>
+<arg>xpath=//a[@tabs-name='${entity alt text}']</arg>
+<doc>Wait And Click Element</doc>
+<status status="PASS" start="2026-08-23T17:49:48.606133" elapsed="0.069476"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//h2[normalize-space(.)="${expected h2 title keyword}"]/following-sibling::h3[contains(., "${expected h3 title keyword}")]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-23T17:49:48.675746" elapsed="0.021513"/>
+</kw>
+<arg>centralthe1card</arg>
+<arg>บัตรเครดิต เซ็นทรัล เดอะวัน เดอะแบล็ค</arg>
+<arg>THE ULTIMATE PRIVILEGES</arg>
+<doc>Click Card Entity And Verify Title</doc>
+<status status="PASS" start="2026-08-23T17:49:48.605866" elapsed="0.091484"/>
+</kw>
+<doc>UI-04 Clicking Central The 1 Updates The Title</doc>
+<tag>regression</tag>
+<tag>sit</tag>
+<tag>smoke</tag>
+<tag>ui</tag>
+<status status="PASS" start="2026-08-23T17:49:48.605468" elapsed="0.092100"/>
+</test>
+<test id="s1-t5" name="UI-05 Clicking Lotus's Money Plus Updates The Title" line="27">
+<kw name="Click Card Entity And Verify Title" owner="ui_keyword">
+<kw name="Wait And Click Element" owner="ui_keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-23T17:49:48.699616" elapsed="0.011520"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-23T17:49:48.711581" level="INFO">Clicking element 'xpath=//a[@tabs-name='lotussmoney']'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-23T17:49:48.711298" elapsed="0.051304"/>
+</kw>
+<arg>xpath=//a[@tabs-name='${entity alt text}']</arg>
+<doc>Wait And Click Element</doc>
+<status status="PASS" start="2026-08-23T17:49:48.699268" elapsed="0.063433"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//h2[normalize-space(.)="${expected h2 title keyword}"]/following-sibling::h3[contains(., "${expected h3 title keyword}")]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-23T17:49:48.762824" elapsed="0.017144"/>
+</kw>
+<arg>lotussmoney</arg>
+<arg>บัตรเครดิตโลตัส แพลทินัม บียอนด์</arg>
+<arg>สิทธิพิเศษที่เหนือกว่าตอบโจทย์</arg>
+<doc>Click Card Entity And Verify Title</doc>
+<status status="PASS" start="2026-08-23T17:49:48.698897" elapsed="0.081184"/>
+</kw>
+<doc>UI-05 Clicking Lotus's Money Plus Updates The Title</doc>
+<tag>regression</tag>
+<tag>sit</tag>
+<tag>smoke</tag>
+<tag>ui</tag>
+<status status="PASS" start="2026-08-23T17:49:48.698090" elapsed="0.082221"/>
+</test>
+<test id="s1-t6" name="UI-06 Clicking HomePro Financial Card Updates The Title" line="32">
+<kw name="Click Card Entity And Verify Title" owner="ui_keyword">
+<kw name="Wait And Click Element" owner="ui_keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-23T17:49:48.782602" elapsed="0.014764"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-23T17:49:48.798044" level="INFO">Clicking element 'xpath=//a[@tabs-name='homeprofinancial']'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-23T17:49:48.797512" elapsed="0.049311"/>
+</kw>
+<arg>xpath=//a[@tabs-name='${entity alt text}']</arg>
+<doc>Wait And Click Element</doc>
+<status status="PASS" start="2026-08-23T17:49:48.782241" elapsed="0.064681"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//h2[normalize-space(.)="${expected h2 title keyword}"]/following-sibling::h3[contains(., "${expected h3 title keyword}")]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-23T17:49:48.847034" elapsed="0.013626"/>
+</kw>
+<arg>homeprofinancial</arg>
+<arg>บัตรเครดิต โฮมโปร วีซ่า แพลทินัม</arg>
+<arg>บัตรเครดิตสำหรับคนรักบ้าน</arg>
+<doc>Click Card Entity And Verify Title</doc>
+<status status="PASS" start="2026-08-23T17:49:48.781051" elapsed="0.079779"/>
+</kw>
+<doc>UI-06 Clicking HomePro Financial Card Updates The Title</doc>
+<tag>regression</tag>
+<tag>sit</tag>
+<tag>smoke</tag>
+<tag>ui</tag>
+<status status="PASS" start="2026-08-23T17:49:48.780623" elapsed="0.080505"/>
+</test>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-08-23T17:49:48.861905" elapsed="2.098786"/>
+</kw>
+<status status="PASS" start="2026-08-23T17:49:17.540164" elapsed="33.420605"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="6" fail="0" skip="0">regression</stat>
+<stat pass="6" fail="0" skip="0">sit</stat>
+<stat pass="6" fail="0" skip="0">smoke</stat>
+<stat pass="6" fail="0" skip="0">ui</stat>
+</tag>
+<suite>
+<stat name="Credit Card Carousel" id="s1" pass="6" fail="0" skip="0">Credit Card Carousel</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

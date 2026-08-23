@@ -1,0 +1,42 @@
+
+URL: https://www.krungsriconsumer.com/credit-card
+BROWSER: Chrome
+IMPLICIT_TIMEOUT: 20s
+confirm: ตกลงทั้งหมด 
+
+expected_texts:
+  - "รวมบัตรเครดิตและสินเชื่อ"
+  - "ในกลุ่มกรุงศรี คอนซูมเมอร์"
+  - "พร้อมสร้างทุกความเป็นไปได้ในทุกไลฟ์สไตล์"
+
+### UI-02 Clicking Krungsri Credit Cards Updates The Title
+krungsricard: krungsricard
+krungsricard_h2: บัตรเครดิต กรุงศรี เอ็กซ์คลูซีฟ ซิกเนเจอร์
+krungsricard_h3: ยกระดับอภิสิทธิ์ความสุข
+
+### UI-03 Clicking First Choice Updates The Title
+firstchoice: firstchoice
+firstchoice_h2: เฟิร์สช้อยส์ วีซ่า แพลทินัม บลูพลัส
+firstchoice_h3: อัปเกรดสิทธิ์ ชีวิตพริวิเลจ
+
+### UI-04 Clicking Central The 1 Updates The Title
+centralthe1card: centralthe1card
+centralthe1card_h2: บัตรเครดิต เซ็นทรัล เดอะวัน เดอะแบล็ค
+centralthe1card_h3: THE ULTIMATE PRIVILEGES
+
+### UI-05 Clicking Lotus's Money Plus Updates The Title
+lotussmoney: lotussmoney
+lotussmoney_h2: บัตรเครดิตโลตัส แพลทินัม บียอนด์
+lotussmoney_h3: สิทธิพิเศษที่เหนือกว่าตอบโจทย์
+
+### UI-06 Clicking HomePro Financial Card Updates The Title
+homeprofinancial: homeprofinancial
+homeprofinancial_h2: บัตรเครดิต โฮมโปร วีซ่า แพลทินัม    
+homeprofinancial_h3: บัตรเครดิตสำหรับคนรักบ้าน
+
+### API
+BASE_URL: https://jsonplaceholder.typicode.com
+ENDPOINT: /posts
+
+
+
